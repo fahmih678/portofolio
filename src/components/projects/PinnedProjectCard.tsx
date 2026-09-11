@@ -10,26 +10,26 @@ interface PinnedProjectCardProps {
 
 export default function PinnedProjectCard({ project }: PinnedProjectCardProps) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-[#141419] p-5 sm:p-6 flex flex-col justify-between shadow-xl transition-all duration-300 hover:border-orange-500/40 hover:-translate-y-1 hover:shadow-2xl group relative overflow-hidden h-full">
+    <div className="rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#141419] p-5 sm:p-6 flex flex-col justify-between shadow-sm dark:shadow-xl transition-all duration-300 hover:border-orange-500/40 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-2xl group relative overflow-hidden h-full">
       {/* Top Bar with Book icon and Public badge */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <BookMarked className="w-4 h-4 text-zinc-500" />
+          <BookMarked className="w-4 h-4 text-slate-400 dark:text-zinc-500" />
           <a
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-base text-orange-300 group-hover:text-orange-400 group-hover:underline transition-colors truncate font-code"
+            className="font-bold text-base text-orange-600 dark:text-orange-300 group-hover:text-orange-700 dark:group-hover:text-orange-400 group-hover:underline transition-colors truncate font-code"
           >
             {project.title}
           </a>
-          <span className="ml-auto text-[10px] border border-zinc-800 rounded-full px-2 py-0.5 text-zinc-500 font-code bg-zinc-900/60">
+          <span className="ml-auto text-[10px] border border-slate-200 dark:border-zinc-800 rounded-full px-2 py-0.5 text-slate-500 dark:text-zinc-500 font-code bg-slate-100 dark:bg-zinc-900/60">
             Public
           </span>
         </div>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm text-zinc-400 line-clamp-3 mb-4 leading-relaxed font-sans">
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 line-clamp-3 mb-4 leading-relaxed font-sans">
           {project.description}
         </p>
 
@@ -38,7 +38,7 @@ export default function PinnedProjectCard({ project }: PinnedProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded bg-orange-500/5 border border-orange-500/15 px-2 py-0.5 text-[10px] font-code text-orange-300/90"
+              className="rounded bg-orange-500/10 dark:bg-orange-500/5 border border-orange-500/20 dark:border-orange-500/15 px-2 py-0.5 text-[10px] font-code text-orange-600 dark:text-orange-300/90"
             >
               {tag}
             </span>
@@ -47,25 +47,25 @@ export default function PinnedProjectCard({ project }: PinnedProjectCardProps) {
       </div>
 
       {/* Footer Stats & Demo Link */}
-      <div className="flex items-center gap-4 text-xs text-zinc-500 pt-4 border-t border-zinc-800/80 font-code">
+      <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-zinc-500 pt-4 border-t border-slate-200 dark:border-zinc-800/80 font-code">
         {/* Language dot */}
         <div className="flex items-center gap-1.5">
           <span
             className="w-2.5 h-2.5 rounded-full"
             style={{ backgroundColor: project.languageColor }}
           />
-          <span className="text-[11px] text-zinc-400">{project.language}</span>
+          <span className="text-[11px] text-slate-600 dark:text-zinc-400">{project.language}</span>
         </div>
 
         {/* Stars */}
-        <div className="flex items-center gap-1 hover:text-orange-400 transition-colors">
-          <Star className="w-3.5 h-3.5 text-zinc-500" />
+        <div className="flex items-center gap-1 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+          <Star className="w-3.5 h-3.5 text-slate-400 dark:text-zinc-500" />
           <span>{project.stars}</span>
         </div>
 
         {/* Forks */}
-        <div className="flex items-center gap-1 hover:text-orange-400 transition-colors">
-          <GitFork className="w-3.5 h-3.5 text-zinc-500" />
+        <div className="flex items-center gap-1 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+          <GitFork className="w-3.5 h-3.5 text-slate-400 dark:text-zinc-500" />
           <span>{project.forks}</span>
         </div>
 
@@ -75,7 +75,7 @@ export default function PinnedProjectCard({ project }: PinnedProjectCardProps) {
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded border border-zinc-700/80 bg-zinc-800/50 px-2.5 py-1 text-[11px] text-zinc-300 hover:border-orange-500/50 hover:text-orange-300 transition-colors"
+            className="inline-flex items-center gap-1 rounded border border-slate-300 dark:border-zinc-700/80 bg-slate-100 dark:bg-zinc-800/50 px-2.5 py-1 text-[11px] text-slate-700 dark:text-zinc-300 hover:border-orange-500/50 hover:text-orange-600 dark:hover:text-orange-300 transition-colors"
           >
             <span>Demo</span>
             <ArrowUpRight className="w-3 h-3" />

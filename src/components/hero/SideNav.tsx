@@ -80,10 +80,10 @@ export default function SideNav() {
             aria-label={item.label}
           >
             {/* Tooltip on Hover */}
-            <div className="absolute right-13 px-3 py-1.5 rounded-md bg-[#121216] border border-orange-500/30 text-xs font-code whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 pointer-events-none shadow-[0_0_15px_rgba(249,115,22,0.15)] flex items-center gap-2">
-              <span className="text-orange-400">&gt;</span>
+            <div className="absolute right-13 px-3 py-1.5 rounded-md bg-white dark:bg-[#121216] border border-slate-300 dark:border-orange-500/30 text-xs font-code whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 pointer-events-none shadow-md dark:shadow-[0_0_15px_rgba(249,115,22,0.15)] flex items-center gap-2">
+              <span className="text-orange-500 dark:text-orange-400">&gt;</span>
               <span
-                className={`font-medium ${isActive ? "text-orange-400 font-bold" : "text-zinc-400"}`}
+                className={`font-medium ${isActive ? "text-orange-600 dark:text-orange-400 font-bold" : "text-slate-600 dark:text-zinc-400"}`}
               >
                 Go to {item.file}
               </span>
@@ -105,8 +105,8 @@ export default function SideNav() {
               <div
                 className={`rounded-full transition-all duration-300 ease-out flex items-center justify-center relative z-10 ${
                   isActive
-                    ? "w-8 h-8 bg-[#0d0d12] border border-orange-400 text-orange-400 shadow-[0_0_18px_rgba(249,115,22,0.4)]"
-                    : "w-3.5 h-3.5 bg-zinc-800 border border-zinc-700 group-hover:w-4 group-hover:h-4 group-hover:border-orange-400/50 group-hover:bg-orange-500/20"
+                    ? "w-8 h-8 bg-white dark:bg-[#0d0d12] border border-orange-500 dark:border-orange-400 text-orange-600 dark:text-orange-400 shadow-md dark:shadow-[0_0_18px_rgba(249,115,22,0.4)]"
+                    : "w-3.5 h-3.5 bg-slate-300 dark:bg-zinc-800 border border-slate-400 dark:border-zinc-700 group-hover:w-4 group-hover:h-4 group-hover:border-orange-500/50 group-hover:bg-orange-500/20"
                 }`}
               >
                 <IconComponent

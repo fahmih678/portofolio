@@ -3,6 +3,7 @@ import HeroLeft from "@/components/hero/HeroLeft";
 import CodeTerminal from "@/components/hero/CodeTerminal";
 import SideNav from "@/components/hero/SideNav";
 import MobileBottomNav from "@/components/ui/MobileBottomNav";
+import ThemeToggle from "@/components/theme/ThemeToggle";
 import CyberAiChat from "@/components/ai/CyberAiChat";
 import AboutSection from "@/components/about/AboutSection";
 import SkillsSection from "@/components/skills/SkillsSection";
@@ -13,14 +14,17 @@ import ContactSection from "@/components/contact/ContactSection";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full flex flex-col justify-start overflow-x-hidden bg-[#070709] selection:bg-orange-500/30 selection:text-orange-200 pb-16 md:pb-0">
+    <main className="relative min-h-screen w-full flex flex-col justify-start overflow-x-hidden bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300 selection:bg-orange-500/30 selection:text-orange-900 dark:selection:text-orange-200 pb-16 md:pb-0">
       {/* 1. Global Cyber Grid & Ambient Glows */}
       <BackgroundGrid />
 
-      {/* 2. Floating Vertical Navigation Track (Desktop) */}
+      {/* 2. Floating Theme Switcher (Light / Dark) */}
+      <ThemeToggle />
+
+      {/* 3. Floating Vertical Navigation Track (Desktop) */}
       <SideNav />
 
-      {/* 3. Mobile Bottom Navigation Bar (Mobile / Tablet) */}
+      {/* 4. Mobile Bottom Navigation Bar (Mobile / Tablet) */}
       <MobileBottomNav />
 
       {/* 4. Floating AI Terminal Assistant FAB & Chat Modal */}

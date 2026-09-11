@@ -41,7 +41,7 @@ export default function ExperienceSection() {
                 >
                   {/* Timeline Commit Dot */}
                   <div className="absolute left-6 sm:left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
-                    <div className="h-4 w-4 rounded-full bg-[#070709] border-2 border-orange-500 relative ring-4 ring-[#141419]">
+                    <div className="h-4 w-4 rounded-full bg-white dark:bg-[#070709] border-2 border-orange-500 relative ring-4 ring-slate-100 dark:ring-[#141419]">
                       <div className="absolute inset-0 bg-orange-400 rounded-full animate-ping opacity-25" />
                     </div>
                   </div>
@@ -62,9 +62,9 @@ export default function ExperienceSection() {
           <div className="mt-16 text-center relative z-10">
             <button
               type="button"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-[#141419] px-6 py-2.5 text-xs font-code text-zinc-400 hover:text-orange-400 hover:border-orange-500/40 transition-colors cursor-default"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-zinc-800 bg-white dark:bg-[#141419] px-6 py-2.5 text-xs font-code text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/40 transition-colors shadow-xs cursor-default"
             >
-              <GitCommit className="w-4 h-4 text-orange-400" />
+              <GitCommit className="w-4 h-4 text-orange-500 dark:text-orange-400" />
               <span>Initial Commit (Hello World)</span>
             </button>
           </div>

@@ -138,13 +138,13 @@ export default function CyberAiChat() {
         {/* Hover Tooltip Bubble */}
         {!isOpen && (
           <div className="hidden sm:block pointer-events-none transition-all duration-300">
-            <div className="relative bg-[#111115] border border-orange-500/30 rounded-xl px-3.5 py-2 shadow-xl shadow-black/60 whitespace-nowrap">
-              <p className="text-[11px] font-code text-zinc-300 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-orange-400" />
+            <div className="relative bg-white dark:bg-[#111115] border border-orange-500/30 rounded-xl px-3.5 py-2 shadow-xl shadow-black/20 dark:shadow-black/60 whitespace-nowrap">
+              <p className="text-[11px] font-code text-slate-700 dark:text-zinc-300 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-orange-500 dark:text-orange-400" />
                 Ask me anything about my experience!
               </p>
               {/* Arrow right */}
-              <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-[#111115] border-t border-r border-orange-500/30 rotate-45" />
+              <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white dark:bg-[#111115] border-t border-r border-orange-500/30 rotate-45" />
             </div>
           </div>
         )}
@@ -168,16 +168,16 @@ export default function CyberAiChat() {
 
       {/* Cyber AI Terminal Chat Modal */}
       {isOpen && (
-        <div className="fixed inset-x-3 bottom-20 sm:bottom-24 sm:right-6 sm:left-auto sm:w-[430px] h-[540px] max-h-[80vh] z-50 flex flex-col rounded-2xl border border-orange-500/40 bg-[#0c0c10]/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="fixed inset-x-3 bottom-20 sm:bottom-24 sm:right-6 sm:left-auto sm:w-[430px] h-[540px] max-h-[80vh] z-50 flex flex-col rounded-2xl border border-slate-300 dark:border-orange-500/40 bg-white/95 dark:bg-[#0c0c10]/95 backdrop-blur-xl shadow-2xl dark:shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
           {/* Terminal Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-800 bg-[#121218]/90">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-neutral-800 bg-slate-100/90 dark:bg-[#121218]/90">
             <div className="flex items-center gap-2.5">
               <div className="flex items-center gap-1.5">
                 <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
               </div>
-              <div className="flex items-center gap-2 font-code text-xs text-orange-400 ml-2">
+              <div className="flex items-center gap-2 font-code text-xs text-orange-600 dark:text-orange-400 ml-2">
                 <Terminal className="w-3.5 h-3.5" />
                 <span className="font-semibold tracking-wide">
                   assistant.ai --live
@@ -188,7 +188,7 @@ export default function CyberAiChat() {
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="text-zinc-400 hover:text-zinc-200 transition-colors p-1 rounded-md hover:bg-neutral-800 cursor-pointer"
+              className="text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200 transition-colors p-1 rounded-md hover:bg-slate-200 dark:hover:bg-neutral-800 cursor-pointer"
               aria-label="Close assistant"
             >
               <ChevronDown className="w-4 h-4" />
@@ -204,7 +204,7 @@ export default function CyberAiChat() {
                   m.sender === "user" ? "items-end" : "items-start"
                 }`}
               >
-                <div className="flex items-center gap-1.5 mb-1 text-[10px] text-zinc-400">
+                <div className="flex items-center gap-1.5 mb-1 text-[10px] text-slate-500 dark:text-zinc-400">
                   <span>{m.sender === "user" ? "> client" : "$ assistant"}</span>
                   <span>•</span>
                   <span>{m.timestamp}</span>
@@ -213,7 +213,7 @@ export default function CyberAiChat() {
                   className={`max-w-[85%] rounded-xl px-3.5 py-2.5 leading-relaxed whitespace-pre-wrap ${
                     m.sender === "user"
                       ? "bg-gradient-to-r from-orange-600 to-amber-600 text-white rounded-tr-none shadow-md shadow-orange-950/40"
-                      : "bg-[#16161e] border border-neutral-800 text-zinc-200 rounded-tl-none"
+                      : "bg-slate-100 dark:bg-[#16161e] border border-slate-200 dark:border-neutral-800 text-slate-800 dark:text-zinc-200 rounded-tl-none"
                   }`}
                 >
                   {m.text}
@@ -222,8 +222,8 @@ export default function CyberAiChat() {
             ))}
 
             {isTyping && (
-              <div className="flex items-center gap-2 text-orange-400 text-xs font-code">
-                <span className="inline-block w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+              <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400 text-xs font-code">
+                <span className="inline-block w-2 h-2 rounded-full bg-orange-500 dark:bg-orange-400 animate-pulse" />
                 <span>Processing query...</span>
               </div>
             )}
@@ -231,13 +231,13 @@ export default function CyberAiChat() {
           </div>
 
           {/* Quick Prompts Carousel */}
-          <div className="px-3 py-2 border-t border-neutral-800/80 bg-[#0d0d12]/80 flex gap-2 overflow-x-auto no-scrollbar">
+          <div className="px-3 py-2 border-t border-slate-200 dark:border-neutral-800/80 bg-slate-50/90 dark:bg-[#0d0d12]/80 flex gap-2 overflow-x-auto no-scrollbar">
             {QUICK_PROMPTS.map((prompt) => (
               <button
                 key={prompt}
                 type="button"
                 onClick={() => handleSend(prompt)}
-                className="shrink-0 px-2.5 py-1 rounded-md bg-[#161620] border border-neutral-800 hover:border-orange-500/40 text-[11px] font-code text-zinc-400 hover:text-orange-300 transition-colors cursor-pointer"
+                className="shrink-0 px-2.5 py-1 rounded-md bg-white dark:bg-[#161620] border border-slate-300 dark:border-neutral-800 hover:border-orange-500/40 text-[11px] font-code text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-300 transition-colors cursor-pointer shadow-xs"
               >
                 {prompt}
               </button>
@@ -250,10 +250,10 @@ export default function CyberAiChat() {
               e.preventDefault();
               handleSend();
             }}
-            className="p-3 border-t border-neutral-800 bg-[#121218]/90 flex items-center gap-2"
+            className="p-3 border-t border-slate-200 dark:border-neutral-800 bg-slate-100/90 dark:bg-[#121218]/90 flex items-center gap-2"
           >
             <div className="relative flex-1">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-orange-400 font-code text-xs">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-orange-500 dark:text-orange-400 font-code text-xs">
                 &gt;
               </span>
               <input
@@ -261,7 +261,7 @@ export default function CyberAiChat() {
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
                 placeholder="Ask about skills, projects, contact..."
-                className="w-full bg-[#161620] border border-neutral-800 rounded-lg pl-7 pr-3 py-2 text-xs font-code text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-orange-500/60 transition-colors"
+                className="w-full bg-white dark:bg-[#161620] border border-slate-300 dark:border-neutral-800 rounded-lg pl-7 pr-3 py-2 text-xs font-code text-slate-800 dark:text-zinc-200 placeholder:text-slate-400 dark:placeholder:text-zinc-600 focus:outline-none focus:border-orange-500/60 transition-colors"
               />
             </div>
             <button

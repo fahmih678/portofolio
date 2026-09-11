@@ -40,19 +40,19 @@ export default function HeroLeft() {
 
         {/* 2. Main Title */}
         <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
-          <span className="text-zinc-100">{developer.prefix} </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-blue-500 relative inline-block">
+          <span className="text-slate-900 dark:text-zinc-100">{developer.prefix} </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-blue-600 dark:from-orange-400 dark:to-blue-500 relative inline-block">
             {developer.firstName} {developer.lastName}
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-orange-500/50 rounded-full blur-sm" />
           </span>
         </h1>
 
         {/* 3. Subtitle / Architect Tagline */}
-        <p className="text-lg sm:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
-          <span className="text-orange-400 font-code font-medium">
+        <p className="text-lg sm:text-xl text-slate-600 dark:text-zinc-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
+          <span className="text-orange-600 dark:text-orange-400 font-code font-medium">
             {developer.roleTag}
           </span>{" "}
-          <span className="text-zinc-200">{developer.tagline}</span>{" "}
+          <span className="text-slate-900 dark:text-zinc-200 font-normal">{developer.tagline}</span>{" "}
           {developer.description}
         </p>
       </div>
@@ -73,27 +73,27 @@ export default function HeroLeft() {
           />
           {/* Card Body */}
           <div
-            className="relative bg-[#1a1a1a] border border-orange-500/30 p-4 flex items-center gap-4 hover:bg-[#202020] transition-colors shadow-2xl h-full"
+            className="relative bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-orange-500/30 p-4 flex items-center gap-4 hover:bg-slate-50 dark:hover:bg-[#202020] transition-colors shadow-lg dark:shadow-2xl h-full"
             style={{ clipPath: cyberClipPath }}
           >
             <div className="relative w-10 h-10 shrink-0 flex items-center justify-center bg-orange-500/10 rounded-sm border border-orange-500/20 group-hover:border-orange-500/50 group-hover:scale-105 transition-all">
-              <TerminalIcon className="w-5 h-5 text-orange-400" />
+              <TerminalIcon className="w-5 h-5 text-orange-500 dark:text-orange-400" />
             </div>
             <div className="flex-1 text-left min-w-0">
               <div className="flex justify-between items-center mb-1">
-                <h3 className="text-sm font-bold text-white group-hover:text-orange-400 transition-colors truncate">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors truncate">
                   Initialize OS
                 </h3>
-                <ArrowUpRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-orange-400 transition-colors ml-2 shrink-0" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 dark:text-gray-500 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors ml-2 shrink-0" />
               </div>
-              <div className="w-full bg-gray-800 h-1 rounded-full overflow-hidden mb-1">
+              <div className="w-full bg-slate-200 dark:bg-gray-800 h-1 rounded-full overflow-hidden mb-1">
                 <div className="h-full bg-orange-500 w-[60%] group-hover:w-[85%] transition-all duration-700 ease-out relative">
                   <div className="absolute inset-0 bg-white/30 animate-pulse" />
                 </div>
               </div>
-              <div className="flex justify-between font-code text-[9px] text-gray-400">
+              <div className="flex justify-between font-code text-[9px] text-slate-500 dark:text-gray-400">
                 <span className="truncate mr-2">&gt; sudo boot_gui</span>
-                <span className="text-orange-400 group-hover:animate-pulse whitespace-nowrap">
+                <span className="text-orange-600 dark:text-orange-400 group-hover:animate-pulse whitespace-nowrap">
                   Loading...
                 </span>
               </div>
@@ -115,15 +115,15 @@ export default function HeroLeft() {
           />
           {/* Card Body */}
           <div
-            className="relative bg-[#1a1a1a] border border-orange-500/30 group-hover:border-orange-500/50 p-4 flex items-center justify-center gap-3 hover:bg-[#202020] transition-colors shadow-xl h-full min-w-[140px]"
+            className="relative bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-orange-500/30 group-hover:border-orange-500/50 p-4 flex items-center justify-center gap-3 hover:bg-slate-50 dark:hover:bg-[#202020] transition-colors shadow-md dark:shadow-xl h-full min-w-[140px]"
             style={{ clipPath: cyberClipPath }}
           >
-            <GithubIcon className="w-5 h-5 text-white group-hover:text-orange-400 transition-colors" />
+            <GithubIcon className="w-5 h-5 text-slate-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors" />
             <div className="text-left">
-              <div className="text-[10px] text-gray-400 font-code leading-none mb-1">
+              <div className="text-[10px] text-slate-500 dark:text-gray-400 font-code leading-none mb-1">
                 Check out
               </div>
-              <div className="font-bold text-white group-hover:text-orange-400 transition-colors leading-none">
+              <div className="font-bold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors leading-none">
                 GitHub
               </div>
             </div>
@@ -132,14 +132,14 @@ export default function HeroLeft() {
       </div>
 
       {/* 5. Loaded Modules Section */}
-      <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-2 opacity-80">
-        <span className="text-xs font-code text-gray-500 mr-2 py-1">
+      <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-2 opacity-90">
+        <span className="text-xs font-code text-slate-500 dark:text-gray-500 mr-2 py-1">
           LOADED_MODULES:
         </span>
         {loadedModules.map((module) => (
           <span
             key={module}
-            className="px-2 py-1 bg-orange-500/5 border border-orange-500/20 text-orange-400/80 text-[10px] font-code rounded tracking-wider hover:bg-orange-500/10 hover:border-orange-500/40 transition-colors cursor-default"
+            className="px-2 py-1 bg-orange-500/10 dark:bg-orange-500/5 border border-orange-500/25 dark:border-orange-500/20 text-orange-600 dark:text-orange-400/80 text-[10px] font-code rounded tracking-wider hover:bg-orange-500/15 dark:hover:bg-orange-500/10 hover:border-orange-500/40 transition-colors cursor-default"
           >
             {module}
           </span>

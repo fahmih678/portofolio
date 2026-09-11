@@ -14,11 +14,11 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="flex items-center gap-3.5 mb-12 sm:mb-16">
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-orange-500/30 bg-orange-500/10 text-orange-400">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-orange-500/30 bg-orange-500/10 text-orange-600 dark:text-orange-400 shadow-sm">
         <Icon className="h-5 w-5" />
       </div>
-      <h2 className="font-code text-2xl sm:text-3xl font-bold text-zinc-100 tracking-tight">
-        <span className="text-zinc-500 mr-2">{prefix}</span>
+      <h2 className="font-code text-2xl sm:text-3xl font-bold text-slate-900 dark:text-zinc-100 tracking-tight">
+        <span className="text-slate-400 dark:text-zinc-500 mr-2">{prefix}</span>
         <span>{title}</span>
       </h2>
     </div>

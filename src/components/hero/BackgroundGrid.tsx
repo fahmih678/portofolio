@@ -17,20 +17,21 @@ export default function BackgroundGrid() {
       <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-purple-600/15 via-pink-600/10 to-transparent blur-[150px]" />
 
       {/* 4. Top-Right Watermark Code */}
-      <div className="absolute top-8 right-16 sm:right-24 hidden md:block text-zinc-700/60 font-code text-xs tracking-wider">
+      <div className="absolute top-8 right-28 sm:right-36 hidden md:block text-slate-400 dark:text-zinc-700/60 font-code text-xs tracking-wider select-none">
         {portfolioData.watermarks.topRight}
       </div>
 
       {/* 5. Bottom-Left Watermark Code */}
-      <div className="absolute bottom-8 left-8 sm:left-14 hidden sm:block text-emerald-500/30 font-code text-xs tracking-wide">
+      <div className="absolute bottom-8 left-8 sm:left-14 hidden sm:block text-emerald-600/40 dark:text-emerald-500/30 font-code text-xs tracking-wide select-none">
         {portfolioData.watermarks.bottomLeft}
       </div>
 
       {/* 6. Bottom Center Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-zinc-600 animate-bounce pointer-events-auto cursor-pointer">
-        <ChevronDown className="w-5 h-5 text-zinc-500 hover:text-orange-400 transition-colors" />
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 dark:text-zinc-600 animate-bounce pointer-events-auto cursor-pointer">
+        <ChevronDown className="w-5 h-5 text-slate-400 dark:text-zinc-500 hover:text-orange-500 dark:hover:text-orange-400 transition-colors" />
       </div>
     </div>
   );
 }
+
 

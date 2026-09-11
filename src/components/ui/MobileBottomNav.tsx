@@ -84,7 +84,7 @@ export default function MobileBottomNav() {
   return (
     <nav
       aria-label="Mobile Navigation Bar"
-      className="fixed bottom-0 left-0 right-0 border-t border-neutral-800 bg-[#09090d]/95 backdrop-blur-md z-50 md:hidden"
+      className="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-neutral-800 bg-white/95 dark:bg-[#09090d]/95 backdrop-blur-md z-50 md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       <div className="grid grid-cols-7 items-center px-2 py-2">
@@ -99,8 +99,8 @@ export default function MobileBottomNav() {
               onClick={() => handleScroll(item.id)}
               className={`mx-auto inline-flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isActive
-                  ? "text-orange-400 bg-orange-500/15 border border-orange-500/30 shadow-[0_0_12px_rgba(249,115,22,0.2)]"
-                  : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50"
+                  ? "text-orange-600 dark:text-orange-400 bg-orange-500/15 border border-orange-500/30 shadow-[0_0_12px_rgba(249,115,22,0.2)]"
+                  : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-800/50"
               }`}
               aria-label={item.tooltip}
               title={item.tooltip}
